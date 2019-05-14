@@ -7,7 +7,7 @@ Eileen, Mark, Luciana, Ian 
 Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (SQLite) 
 Tracks: Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
 One JS library (not covered in class):  React or Angular
-Dataset (at least 100 records): parks.csv, species.csv (kaggle.com), US wildfires: https://www.kaggle.com/rtatman/188-million-us-wildfires#FPA_FOD_20170508.sqlite, human mobility (during national disasters): https://www.kaggle.com/dryad/human-mobility-during-natural-disasters
+Dataset (at least 100 records): parks.csv, species.csv (kaggle.com), US wildfires: https://www.kaggle.com/rtatman/188-million-us-wildfires#FPA_FOD_20170508.sqlite
 Link to Github repo:  https://github.com/Mpalmese/Project2
 Some User-driven interactions: menus, dropdowns, textboxes, etc.  
 Final visualizations: map, table, histogram
