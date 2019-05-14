@@ -1,14 +1,30 @@
 # Project2
 
-Group Proposal 
-Eileen Dolan, Mark Palmese, Luciana, Ian 
-Must include:  
-Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (SQ, MongoDB, SQLite etc) 
-One of four tracks: Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
+**Group Proposal 
+Eileen, Mark, Luciana, Ian 
+
+* *Must include:  
+
+**Visualization: 
+
+Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (SQLite) 
+
+**Tracks: 
+
+Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
 One JS library (not covered in class):  React or Angular
-Dataset (at least 100 records): parks.csv, species.csv
-Some User-driven interactions: menus, dropdowns, textboxes, etc.  
-Final visualization: Include at least three views: map, table, histogram
+
+**Dataset (at least 100 records): 
+
+parks.csv, species.csv
+
+**Some User-driven interactions: 
+
+menus, dropdowns, textboxes, etc.  
+
+**Final visualizations: 
+
+map, table, histogram
  
 One-page proposal:  
 A brief articulation of your topic and rationale:  Our topic is on national parks and how invasive species impact them.
