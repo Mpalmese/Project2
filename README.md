@@ -15,8 +15,7 @@ Dataset link (API): https://www.nps.gov/subjects/developer/api-documentation.ht
 
 **Screenshots of relevant and inspiring visualizations and of the metadata:
 
-* One-page proposal:  
-Topic and rationale:  
+* Topic and rationale:  
 
 The importance of research in national parks has been of great importance throughout history, even more so today. The National Park Service (NPS) research program generates data that allows scientists, resources managers, politicians and the general population on the increasing threats that affect naitional parks and recreation. Such threats include pollution, endangered species, and the reprecussions of climate change and tourism on the parks. One major issue has been how wildfires have impacted these nationals park that not only destroy nature and wildlife itself, but takes away from recreational activities and teaching people about natural ecosystems. Through visual storytelling and research, we can uncover if national parks should be allowed to burn during wildfires?
 
