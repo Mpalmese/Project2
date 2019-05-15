@@ -4,20 +4,20 @@ Group Proposal 
 Eileen, Mark, Luciana, Ian 
 
 * Must include:  
-Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (SQLite) 
+Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (MongoDB) 
 Tracks: Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
 One JS library (not covered in class):  React or Angular
-Dataset (at least 100 records): parks.csv, species.csv (kaggle.com), US wildfires: https://www.kaggle.com/rtatman/188-million-us-wildfires#FPA_FOD_20170508.sqlite, forest fires.csv: https://www.kaggle.com/elikplim/forest-fires-data-set
+Dataset (at least 100 records): worldbank (CSV): databank.worldbank.org
 Link to Github repo:  https://github.com/Mpalmese/Project2
 Some User-driven interactions: menus, dropdowns, textboxes, etc.  
 Final visualizations: map, table, histogram
-Dataset link (API): https://www.nps.gov/subjects/developer/api-documentation.htm
+Dataset link (API): worldbank API: https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-country-api-queries
 
 **Screenshots of relevant and inspiring visualizations and of the metadata:
 
+![alt text](https://files.slack.com/files-pri/TF5V30HFH-FJQSHS0GG/image.png)
+
+
 * Topic and rationale:  
 
-The importance of research in national parks has been of great importance throughout history, even more so today. The National Park Service (NPS) research program generates data that allows scientists, resources managers, politicians and the general population on the increasing threats that affect national parks and recreation. Such threats include pollution, endangered species, and the reprecussions of climate change and tourism on the parks. One major issue has been how wildfires have impacted these nationals park that not only destroy nature and wildlife itself, but takes away from recreational activities and teaching people about natural ecosystems. Wildfires are a part of nature too. Through visual storytelling and research, we can uncover if fires in national parks be allowed to burn?
-
-The API on national parks and dataset is designed to provide authoritative National Park Service (NPS) data and content about parks and their facilities. Park basics data includes location and information for each national park. Our dataset includes species at the parks and the wildfires that occurred in the United States from 1992 to 2015. 
-
+The purpose of the research is to look at the global life expectancy within the past 20 years. Does socioeconomic status (income level) impact life expectancy. With further examination, we can determine if life expectancy changes over time. 
