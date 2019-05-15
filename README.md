@@ -15,7 +15,7 @@ Dataset link (API): worldbank API: https://datahelpdesk.worldbank.org/knowledge
 
 **Screenshots of relevant and inspiring visualizations and of the metadata:
 
-![alt text](https://files.slack.com/files-pri/TF5V30HFH-FJQSHS0GG/image.png)
+![alt text](image.png)
 
 
 * Topic and rationale:  
