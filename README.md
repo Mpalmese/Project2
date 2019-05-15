@@ -13,8 +13,10 @@ Some User-driven interactions: menus, dropdowns, textboxes, etc.  
 Final visualizations: map, table, histogram
 Dataset link (API): worldbank API: https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-country-api-queries
 
-![alt text](image.png)
-
 * Topic and rationale:  
 
 The purpose of the research is to look at the global life expectancy within the past 20 years. Does socioeconomic status (income level) impact life expectancy. With further examination, we can determine if life expectancy changes over time. 
+
+![alt text](image.png)
+
+
