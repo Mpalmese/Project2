@@ -2,16 +2,22 @@
 
 Group Proposal 
 Eileen, Mark, Luciana, Ian 
+ 
+* Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (MongoDB) 
 
-* Must include:  
-Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (MongoDB) 
-Tracks: Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
-One JS library (not covered in class):  React or Angular
-Dataset (at least 100 records): worldbank (CSV): databank.worldbank.org
-Link to Github repo:  https://github.com/Mpalmese/Project2
-Some User-driven interactions: menus, dropdowns, textboxes, etc.  
-Final visualizations: map, table, histogram
-Dataset link (API): worldbank API: https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-country-api-queries
+* Tracks: Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
+
+* JS library (not covered in class):  React or Angular
+
+* Dataset (at least 100 records): worldbank (CSV): databank.worldbank.org
+
+* Link to Github repo:  https://github.com/Mpalmese/Project2
+
+* Some User-driven interactions: menus, dropdowns, textboxes, etc.  
+
+* Final visualizations: map, table, histogram
+
+* Dataset link (API): worldbank API: https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-country-api-queries
 
 * Topic and rationale:  
 
