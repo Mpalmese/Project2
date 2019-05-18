@@ -5,6 +5,8 @@ from sqlalchemy import create_engine, inspect
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 import sqlite3
+import json
+import requests
 from flask import (
     Flask,
     render_template,
@@ -34,6 +36,8 @@ Base.prepare(engine, reflect=True)
 
 Life = Base.classes.life
 
+life_db = pd.read_sql("SELECT * FROM life", conn)
+
 # Flask setup
 
 app = Flask(__name__)
@@ -43,8 +47,9 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/api/v1.0/country")
+@app.route("/api/v1.0/lifedata")
 def data():
+    session = Session(engine)
     results = session.query(Life.Country_Name, Life.Country_Code, Life.Yr1999, Life.Yr2000,Life.Yr2001,Life.Yr2002,Life.Yr2003,Life.Yr2004,Life.Yr2005,Life.Yr2006,Life.Yr2007,Life.Yr2008,Life.Yr2009,Life.Yr2010,Life.Yr2011,Life.Yr2012,Life.Yr2013,Life.Yr2014,Life.Yr2015,Life.Yr2016,Life.Yr2017).all()
 
     country_data = []
@@ -74,6 +79,35 @@ def data():
         country_data.append(country_dict)
 
     return jsonify(country_data)
+
+@app.route("/api/v1.0/incomedata")
+def incomedata():
+
+    country_codes = []
+    for row in life_db['Country_Code']:
+        country_codes.append(row)
+
+    country_names = []
+    for row in life_db['Country_Name']:
+        country_names.append(row)
+
+    count = 0
+
+    income_list = []
+
+    for code in country_codes:
+        country_code = code
+        url = 'http://api.worldbank.org/v2/country/'+ country_code + '?format=json'
+        response = requests.get(url).json()
+        income_dict = {}
+        income_dict['Country_Name'] = country_names[count]
+        if response[1][0]['incomeLevel']['value'] != 'Aggregates':
+            income_dict['Income_Level'] = response[1][0]['incomeLevel']['value']
+            income_list.append(income_dict)
+        count +=1
+    
+    return jsonify(income_list)
+
 
 if __name__ == "__main__":
     app.run()
