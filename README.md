@@ -3,7 +3,7 @@
 Group Proposal 
 Eileen, Mark, Luciana, Ian 
  
-* Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (MongoDB) 
+* Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (SQlite) 
 
 * Tracks: Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
 
