@@ -7,7 +7,7 @@ Eileen, Mark, Luciana, Ian 
 
 * Tracks: Web scraping, Leaflet and Plotly, and Dashboard page with multiple charts (update from the same data)
 
-* JS library (not covered in class):  React or Angular
+* JS library (not covered in class):  React 
 
 * Dataset (at least 100 records): worldbank (CSV): databank.worldbank.org
 
@@ -15,7 +15,7 @@ Eileen, Mark, Luciana, Ian 
 
 * Some User-driven interactions: menus, dropdowns, textboxes, etc.  
 
-* Final visualizations: map, table, histogram
+* Final visualizations: map, table, graphs
 
 * Dataset link (API): worldbank API: https://datahelpdesk.worldbank.org/knowledgebase/articles/898590-country-api-queries
 
