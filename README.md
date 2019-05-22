@@ -1,7 +1,7 @@
 # Project2
 
 Group Proposal 
-Eileen, Mark, Luciana, Ian 
+Eileen, Mark, Luciana
  
 * Visualization: Python flask + power RESTful API, HTML/CSS, JavaScript, and one database (SQlite) 
 
