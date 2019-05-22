@@ -48,3 +48,31 @@ var lifedata = lifedata;
   }}
 
 
+  var legend = L.control({position: 'bottomright'});
+
+  legend.onAdd = function (myMap) {
+  
+      var div = L.DomUtil.create('div', 'info legend'),
+          grades = [],
+          labels = ['High Income (GNI per capita > $12,055)', 'Upper Middle Income (GNI per capita $3,896 and $12,055)', 'Lower Middle Income (GNI per capita $996 - $3,895)','Low Income (GNI per capita < $995)' ];
+  
+      // loop through our density intervals and generate a label with a colored square for each interval
+      for (var i = 0; i < labels.length; i++) {
+          div.innerHTML +=
+              '<i style="background:' + getColor(labels[i]) + '"></i> ' +
+              labels[i] +  '<br>';
+      }
+  
+      return div;
+  };
+  
+  function getColor(d) {
+      
+    return d === 'Low Income (GNI per capita < $995)'   ? 'red' :
+            d === 'Upper Middle Income (GNI per capita $3,896 and $12,055)' ? 'yellowgreen' :
+            d === 'Lower Middle Income (GNI per capita $996 - $3,895)' ? 'chocolate' :
+           'green';
+                      
+}
+
+  legend.addTo(myMap);

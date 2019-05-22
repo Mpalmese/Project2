@@ -234,7 +234,7 @@ function init() {
     
     // const firstchart = data[0].Country_Name;
     // buildCharts(firstchart);
-    
+    buildCharts('AFG');
 
 };
 
