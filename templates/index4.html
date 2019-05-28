@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="{{ url_for('static', filename='c3-0.7.0/c3.css') }}" rel="stylesheet" type="text/css">
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='c3-0.7.0/c3.min.js') }}"></script>
+    <script src="../static/js/incomedata.js"></script>
+    <script src="../static/js/lifedata.js"></script>
+</head>
+
+<body>
+    
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h1>Comparison Life Expectancy vs Income Level</h1>
+                <h3>Range 1: 2000 to 2008 - Range 2: 2009 to 2017 </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12  col-md-9">
+                <div id="chart">
+                    <!-- We append our chart here. -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const incomedata_input = incomedata;
+            const lifedata_input = lifedata;
+            const mp = {};
+            incomedata_input.forEach(element => {
+                const incomeLevel_tmp = element.Income_Level;
+                if (mp.hasOwnProperty(incomeLevel_tmp)) {
+                    mp[incomeLevel_tmp].push(element.Country_Name);
+                } else {
+                    mp[incomeLevel_tmp] = [element.Country_Name];
+                }
+            });
+
+            const incomeLevelMap = {
+                'High income': 1,
+                'Low income': 2,
+                'Lower middle income': 3,
+                'Upper middle income': 4
+            }
+            const output = [
+                ['range1'],
+                ['range2']
+            ];
+            // 2000 -> 2007 range1 -> 
+            // 2008 -> 2017 range2 
+            Object.keys(mp).map(incomeLevel => {
+                var counter1 = 0;
+                var counter2 = 0;
+                var i = incomeLevelMap[incomeLevel];
+                output[0][i] = 0;
+                output[1][i] = 0;
+                const countries = mp[incomeLevel];
+                countries.forEach(country => {
+                    const lefedataObj = lifedata_input.find(obj => obj.Country_Name === country);
+                    if (!lefedataObj) {
+                        return;
+                    }
+                    var result = 0;
+                    if (isNaN(lefedataObj['Yr2000'])) {
+                        return;
+                    }
+
+                    var k = 0;
+                    var year;
+                    while (k < 8) {
+                        year = 'Yr200' + k;
+                        k++;
+                        if (isNaN(lefedataObj[year])) {
+                            continue;
+                        }
+                        output[0][i] += lefedataObj[year];
+                        counter1++;
+                    }
+
+                    while (k < 18) {
+                        year = k < 10 ? 'Yr200' + k : 'Yr20' + k;
+                        k++;
+                        if (isNaN(lefedataObj[year])) {
+                            continue;
+                        }
+                        output[1][i] += lefedataObj[year];
+                        counter2++;
+                    }
+                });
+                output[0][i] = output[0][i] / counter1;
+                output[1][i] = output[1][i] / counter2;
+            });
+            console.log(mp);
+            console.log(output);
+
+            // generate two data, one for 2000 -> 2008, one for 2009 -> 2017
+            var chart = c3.generate({
+
+                    size: {
+                        height: 340,
+                        width: 680
+                    },
+                    legend: {
+                        position: 'right'
+                    },
+
+
+                    data: {
+                        columns: output,
+
+                        types: {
+                            range1: 'line',
+                            range2: 'bar'
+                        },
+                        groups: [
+                            ['2000 - 2007', '2008 - 2017']
+                        ]
+                    },
+                    axis: {
+                        x: {
+                            type: 'categorized',
+                            categories: ['High Income', 'Low Income', 'Lower middle income', 'Upper middle income']
+                        },
+                        label: {
+                            text: 'Income Level',
+                            position: 'outer-middle'
+
+                        },
+
+
+                    }
+
+                },
+
+            );
+        </script>
+
+</body>
+
+</html>
