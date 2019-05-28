@@ -163,5 +163,9 @@ def country(country):
 def map():
     return render_template('index2.html')
 
+@app.route("/chart")
+def chart():
+    return render_template('index4.html')
+
 if __name__ == "__main__":
     app.run()
