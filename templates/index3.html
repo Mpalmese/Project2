@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Flask Plotlyjs Example</title>
+  <title>Life Expectancy vs Income Level</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -33,20 +33,34 @@
           <p>As you inspect the data about each country, you will notice that life expectancy is higher, on average, in countries with a higher income level. Over time, most countries show a steady improvement in their life expectancy as average expectancies also rise.</p>
       </div>
       <div class = "col-md-12">
+          <h3>
+              Is Life Expectancy Statistically Significantly Different Between Higher Income Countries and Lower Income Countries?
+          </h3>    
+              <br><br>
+              <p>
+                  Null Hypothesis:
+                  <br>    Lower income countries have a larger or equal average life expectancy to the life expectancy of higher income countries.
+                  <br>
+                  <br>
+                  We Want to Prove: 
+                  <br>    Higher income countries have a longer life expectancy than lower income countries.
+                  <br><br>Boostrapping:<br>
+                  Simulating the sampling distribution by sampling with replacement.
+                  <br></p>
         <img src="{{ url_for('static', filename='img/Significance.png') }}"/>
       </div>
       <div class="col-md-12">
-          <p>
-            Is Life Expectancy Statistically Significantly Different Between Higher Income Countries and Lower Income Countries?
+            <p>
             <br>
-            Our null hypothesis is that lower income countries have a larger or equal average life expectancy to the life expectancy of higher income countries.
-            <br>
-            The alternative, what we want to prove as true, is that higher income countries have a longer life expectancy than lower income countries.
-            <br>
-            Our observed difference tells us that high income countries live an average of 11.32 years longer than countries with low income. Is this statistically significant though?
-            <br>
-            Given our P-Value of 0.0008 we reject the null hypothesis and conclude that life expectancy is infact statisitcally significantly different in high income countries than lower income countries. Now we can say with statisitical certainty that our hypothesis that higher income leads to higher life expectancy is correct.
+            Observed Difference: 
+            <br>    High income countries live an average of 11.32 years longer than countries with low income. 
+            <br>Is this statistically significant though?
+            <br><br>
+            P-Value:
+            <br>    With a value of 0.0008, we reject the null hypothesis and conclude that life expectancy is infact statisitcally significantly different in high income countries than lower income countries.
+            <br>    Now we can say with statisitical certainty that our hypothesis that higher income leads to higher life expectancy is correct.
           </p>
+          <br><br>
       </div>
     </div>
 
